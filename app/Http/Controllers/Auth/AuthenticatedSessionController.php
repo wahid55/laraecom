@@ -51,7 +51,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request)
     {
-        Auth::guard('web')->logout();
+        $guard = 'web';
+        if($request->routeIs('admin.*')) {
+            $guard = 'admin';
+        }
+
+        Auth::guard($guard)->logout();
 
         $request->session()->invalidate();
 
