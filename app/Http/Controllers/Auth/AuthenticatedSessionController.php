@@ -57,6 +57,10 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect("/");
+        if($request->routeIs('admin.*')) {
+            return redirect()->route('admin.login');
+        }
+
+        return redirect()->route('home');
     }
 }
