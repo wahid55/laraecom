@@ -11,7 +11,7 @@
             <!-- Validation Errors -->
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('admin.register') }}">
                 @csrf
 
                  <!-- Name -->
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
-                    <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('login') }}">
+                    <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('admin.login') }}">
                         {{ __('Already registered?') }}
                     </a>
 
