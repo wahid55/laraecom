@@ -14,16 +14,32 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
-                 <!-- Name -->
-                 <div>
+                <!-- First Name -->
+                <div>
                     <label class="block text-sm font-medium text-gray-700">
-                        {{ __('Name') }}
+                        {{ __('First Name') }}
                     </label>
 
-                    <input id="name" type="text" class="form-input w-full @error('name')  border-red-500 @enderror"
-                            name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input id="first_name" type="text" class="form-input w-full @error('first_name')  border-red-500 @enderror"
+                            name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
 
-                    @error('name')
+                    @error('first_name')
+                        <p class="mt-1 text-xs italic text-red-500">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                </div>
+
+                <!-- Last Name -->
+                <div class="mt-4">
+                    <label class="block text-sm font-medium text-gray-700">
+                        {{ __('Last Name') }}
+                    </label>
+
+                    <input id="last_name" type="text" class="form-input w-full @error('last_name')  border-red-500 @enderror"
+                            name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+
+                    @error('last_name')
                         <p class="mt-1 text-xs italic text-red-500">
                             {{ $message }}
                         </p>

@@ -19,7 +19,8 @@ class Admin extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
         'is_super',
@@ -61,5 +62,14 @@ class Admin extends Authenticatable implements MustVerifyEmail
      */
     public function sendEmailVerificationNotification() {
         $this->notify(new VerifyEmail());
+    }
+
+    /**
+     * Get Fullname of admin.
+     *
+     * @return string
+     */
+    public function name() {
+        return $this->first_name . ' ' . $this->last_name;
     }
 }

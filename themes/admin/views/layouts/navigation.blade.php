@@ -7,7 +7,7 @@
         <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right absolute right-0 mt-2 w-52 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div class="px-4 pt-2 pb-1 text-gray-700">
                 <p class="text-xs">{{ __("Welcome") }}</p>
-                <p class="font-bold">{{ Auth::guard('admin')->user()->name }}</p>
+                <p class="font-bold">{{ Auth::guard('admin')->user()->name() }}</p>
             </div>
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
