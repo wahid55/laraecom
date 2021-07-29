@@ -23,3 +23,25 @@ Route::get('/home', function () {
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
+
+
+
+
+// use App\Models\Address;
+// use App\Models\User;
+
+// Route::get('user/{id}/addresses', function ($id) {
+//     $user = User::find($id);
+//     $addresses = $user->addresses;
+//     return response()->json($addresses);
+// });
+
+// Route::get('address/{id}/user', function ($id) {
+//     $address = Address::find($id);
+//     $user = $address->user;
+//     return response()->json($user);
+// });
+
+
+
+

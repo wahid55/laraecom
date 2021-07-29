@@ -50,4 +50,11 @@ class User extends Authenticatable
     public function name() {
         return $this->first_name . ' ' . $this->last_name;
     }
+
+    /**
+     * Get the addresses for the user.
+     */
+    public function addresses() {
+        return $this->hasMany(Address::class);
+    }
 }
