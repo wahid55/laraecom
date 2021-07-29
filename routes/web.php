@@ -45,3 +45,17 @@ require __DIR__.'/admin.php';
 
 
 
+// use App\Models\Admin;
+// use App\Models\Shop;
+
+// Route::get('admin/{id}/shop', function ($id) {
+//     $admin = Admin::find($id);
+//     $shop = $admin->shop;
+//     return response()->json($shop);
+// });
+
+// Route::get('shop/{id}/admin', function ($id) {
+//     $shop = Shop::find($id);
+//     $admin = $shop->admin;
+//     return response()->json($shop);
+// });
