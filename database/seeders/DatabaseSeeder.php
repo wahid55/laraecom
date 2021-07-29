@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Setting;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
             ShopSeeder::class,
             UserSeeder::class,
             AddressSeeder::class,
+            SettingSeeder::class,
         ]);
     }
 }
