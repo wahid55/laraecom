@@ -60,3 +60,18 @@ require __DIR__.'/admin.php';
 //     $admin = $shop->admin;
 //     return response()->json($shop);
 // });
+
+
+// use App\Models\Category;
+
+// Route::get('categories/{id}/children', function ($id) {
+//     $category = Category::find($id);
+//     $children = $category->children;
+//     return response()->json($children);
+// });
+
+// Route::get('categories/{id}/parent', function ($id) {
+//     $category = Category::find($id);
+//     $parent = $category->parent;
+//     return response()->json($parent);
+// });
