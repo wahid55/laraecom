@@ -29,7 +29,7 @@ class CategoryFactory extends Factory
             'description'   => $this->faker->realText(100),
             'parent_id'     => 1,
             'featured'      => $this->faker->boolean(),
-            'menu'          => 1,
+            'menu'          => true,
             'image'         => $this->faker->imageUrl(200, 200),
         ];
     }

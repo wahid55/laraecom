@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             AddressSeeder::class,
             SettingSeeder::class,
             CategorySeeder::class,
+            AttributeSeeder::class,
+            AttributeValueSeeder::class,
         ]);
     }
 }

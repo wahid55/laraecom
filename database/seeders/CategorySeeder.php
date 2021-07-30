@@ -19,6 +19,9 @@ class CategorySeeder extends Seeder
             'name' => 'Uncategorized',
             'slug' => 'uncategorized',
             'description' => 'This is uncategory.',
+            'parent_id' => null,
+            'featured' => false,
+            'menu' => false,
         ]);
         Category::factory()->count(19)->create();
     }

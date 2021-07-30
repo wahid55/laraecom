@@ -25,6 +25,15 @@ class Category extends Model
     ];
 
     /**
+     * @var array
+     */
+    protected $casts  = [
+        'parent_id' => 'integer',
+        'featured'  => 'boolean',
+        'menu'      => 'boolean'
+    ];
+
+    /**
      * Get the category associated with the category.
      */
     public function parent() {

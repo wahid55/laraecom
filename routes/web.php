@@ -75,3 +75,19 @@ require __DIR__.'/admin.php';
 //     $parent = $category->parent;
 //     return response()->json($parent);
 // });
+
+
+// use App\Models\Attribute;
+// use App\Models\AttributeValue;
+
+// Route::get('attr/{id}/values', function ($id) {
+//     $attr = Attribute::find($id);
+//     $values = $attr->values;
+//     return response()->json($values);
+// });
+
+// Route::get('value/{id}/attr', function ($id) {
+//     $value = AttributeValue::find($id);
+//     $attr = $value->attribute;
+//     return response()->json($attr);
+// });
