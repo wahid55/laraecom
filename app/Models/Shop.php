@@ -35,4 +35,11 @@ class Shop extends Model
     public function admin() {
         return $this->belongsTo(Admin::class);
     }
+
+    /**
+     * Get the products for the shop.
+     */
+    public function products() {
+        return $this->hasMany(Product::class);
+    }
 }

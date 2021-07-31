@@ -21,5 +21,10 @@ class ProductImage extends Model
         'original',
     ];
 
-    
+    /**
+     * Get the product that owns the image.
+     */
+    public function product() {
+        return $this->belongsTo(Product::class);
+    }
 }

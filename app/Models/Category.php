@@ -46,4 +46,11 @@ class Category extends Model
     public function children() {
         return $this->hasMany(Category::class, 'parent_id');
     }
+
+    /**
+     * The products that belong to the category.
+     */
+    public function products() {
+        return $this->belongsToMany(Product::class)->withTimestamps();
+    }
 }
