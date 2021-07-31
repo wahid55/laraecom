@@ -1,0 +1,22 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\Product;
+
+class AttributeProductSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        for($i=1; $i<=500; $i++) {
+            $product = Product::find($i);
+            $product->attributes()->syncWithPivotValues(random_int(1, 2), ['quantity' => random_int(100, 1000)]);
+        }
+    }
+}

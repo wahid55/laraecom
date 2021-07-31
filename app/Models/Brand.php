@@ -19,4 +19,11 @@ class Brand extends Model
         'slug', 
         'logo',
     ];
+
+    /**
+     * Get the products for the brand.
+     */
+    public function products() {
+        return $this->hasMany(Product::class);
+    }
 }

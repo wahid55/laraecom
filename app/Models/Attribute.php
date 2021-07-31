@@ -36,4 +36,11 @@ class Attribute extends Model
     public function values() {
         return $this->hasMany(AttributeValue::class);
     }
+
+    /**
+     * The products that belong to the attribute.
+     */
+    public function products() {
+        return $this->belongsToMany(Product::class)->withTimestamps();
+    }
 }

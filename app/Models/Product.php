@@ -45,9 +45,24 @@ class Product extends Model
     }
 
     /**
-     * The products that belong to the category.
+     * The categories that belong to the product.
      */
     public function categories() {
         return $this->belongsToMany(Category::class)->withTimestamps();
+    }
+
+    /**
+     * Get the brand that owns the product.
+     */
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
+
+    /**
+     * The attributes that belong to the product.
+     */
+    public function attributes() {
+        return $this->belongsToMany(Attribute::class)->withTimestamps();
     }
 }
