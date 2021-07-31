@@ -22,7 +22,7 @@ class CreateAddressesTable extends Migration
             $table->string('country')->nullable();
             $table->string('zip')->nullable();
             $table->string('mobile')->nullable();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

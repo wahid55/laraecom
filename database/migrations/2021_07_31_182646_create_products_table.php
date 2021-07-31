@@ -26,7 +26,7 @@ class CreateProductsTable extends Migration
             $table->boolean('status')->default(1);
             $table->boolean('featured')->default(0);
             $table->foreignId('brand_id')->constrained();
-            $table->foreignId('shop_id')->constrained();
+            $table->foreignId('shop_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

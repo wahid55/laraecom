@@ -26,7 +26,7 @@ class CreateShopsTable extends Migration
             $table->string('zip')->nullable();
             $table->string('email')->unique()->nullable();
             $table->string('mobile')->unique()->nullable();
-            $table->foreignId('admin_id')->constrained();
+            $table->foreignId('admin_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
